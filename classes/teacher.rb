@@ -4,7 +4,7 @@ class Teacher < Person
     @specialization = specialization
   end
 
-  #can_use_services? overidden to always return true
+  # can_use_services? overidden to always return true
   def can_use_services?
     true
   end
