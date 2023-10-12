@@ -15,11 +15,8 @@ puts person.correct_name
 puts capitalized_person.correct_name
 puts capitalized_trimmed_person.correct_name
 
-
-
 # Create a Person object with the name "Koo" and age 7
 person2 = Person.new(age: 7, name: 'Koo')
 
 # Print the name of the person
 puts person2.correct_name
-puts "#{person2.age}"
