@@ -9,4 +9,8 @@ class Rental
     book.rentals << self
     person.rentals << self
   end
+
+  def add_rentals(person, date)
+    Rental.new(date, self, person)
+  end
 end
