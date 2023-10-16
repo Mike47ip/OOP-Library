@@ -1,5 +1,4 @@
 require_relative 'app'
-# require_relative 'initial'
 
 def main
   app = App.new
@@ -10,7 +9,6 @@ def main
       4 => :create_book,
       5 => :create_rental,
       6 => :list_rental,
-      7 => :exit,
       default: :invalid_option
     }
 
@@ -18,6 +16,10 @@ def main
     app.options
     print 'input: '
     option = gets.chomp.to_i
+    if option==7
+      puts "Exiting... Thank you"
+      break
+    end
     selection = tasks[option] || tasks[:default]
     app.send(selection)
     puts "\n"
