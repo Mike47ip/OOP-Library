@@ -26,7 +26,6 @@ class Person < Nameable
     rental = Rental.new(date, self, book)
     @rentals << rental
   end
-
   private
 
   def of_age?
