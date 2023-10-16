@@ -14,7 +14,6 @@ capitalized_trimmed_person = TrimmerDecorator.new(capitalized_person)
 puts person.correct_name
 puts capitalized_person.correct_name
 puts capitalized_trimmed_person.correct_name
-
 # Create a Person object with the name "Koo" and age 7
 person2 = Person.new(age: 7, name: 'Koo')
 
