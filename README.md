@@ -51,6 +51,7 @@
 - **[Encapsulation]**
 - **[Inheritance]**
 - **[polymorphism]**
+- **[refactor]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -103,6 +104,12 @@ To run the project, execute the following command:
 - Twitter: [@ip_mikee](https://twitter.com/ip_mikee)
 - LinkedIn: [Michael Darkwah](https://www.linkedin.com/in/michael-darkwah-81a039141/)
 
+👤 **Mohammad Ali Reza**
+
+- GitHub: [@githubhandle](https://github.com/AliRezaBmeDu)
+- Twitter: [@twitterhandle](https://twitter.com/share_insider)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/mohammad-ali-reza-25686428b/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
@@ -117,7 +124,7 @@ Feel free to check the [issues page](https://github.com/Mike47ip/OOP-Library/iss
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project give it a **STAR**
+If you like this project give it a ⭐️
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
