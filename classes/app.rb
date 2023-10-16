@@ -47,7 +47,7 @@ class App
     age = gets.chomp.to_i
     print "Teacher's specialization: "
     specialization = gets.chomp
-    teacher = Teacher.new(age, specialization, name, parent_permission: true)
+    teacher = Teacher.new(age, specialization, name)
     @people << teacher
     puts 'You have successfully registered a Teacher'
   end
