@@ -18,51 +18,44 @@ class App
     @people.each { |person| puts "[#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}" }
   end
 
-  def create_student
+  def create_person_inputs
+    print 'Do you want to create a student (1) or a teacher (2)? [Input the number]: '
+    type_num = gets.chomp.to_i
+    if type_num == 1
+      type = 'Student'
+    elsif type_num == 2
+      type = 'Teacher'
+    else
+      puts 'Invalid option'
+      return
+    end
     print 'Age: '
     age = gets.chomp.to_i
     print 'Name: '
-    name = gets.chomp
-    print 'Has parent permission? [Y/N]: '
-    permission = gets.chomp.downcase
+    name = gets.chomp.capitalize
 
-    case permission
-    when 'y'
-      student = Student.new(age, nil, name, parent_permission: true)
-      @people << student
-    when 'n'
-      student = Student.new(age, nil, name, parent_permission: false)
-      @people << student
-    else
-      'You have entered an invalid option'
-    end
-
-    puts 'You have successfully registered a Student'
-  end
-
-  def create_teacher
-    print "Teacher's name: "
-    name = gets.chomp
-    print "Teacher's age: "
-    age = gets.chomp.to_i
-    print "Teacher's specialization: "
-    specialization = gets.chomp
-    teacher = Teacher.new(age, specialization, name)
-    @people << teacher
-    puts 'You have successfully registered a Teacher'
+    [age, name, type]
   end
 
   def create_person
-    print 'Do you want to create a new student (1) or teacher (2)? [Input the number]: '
-    type_of_person = gets.chomp.to_i
-    case type_of_person
-    when 1
-      create_student
-    when 2
-      create_teacher
+    age, name, type = create_person_inputs
+    case type
+    when 'Student'
+      print 'Has parent permission [Y/N]: '
+      parent_permission_input = gets.chomp.upcase
+      parent_permission = (parent_permission_input == 'Y')
+      person = Student.new(age, nil, name, parent_permission: parent_permission)
+    when 'Teacher'
+      print 'Specialization: '
+      specialization = gets.chomp
+      person = Teacher.new(age, specialization, name)
     else
-      puts 'You have entered an invalid option'
+      puts 'Invalid person type'
+      return
     end
+
+    @people << person
+    puts 'Person created successfully'
   end
 
   def create_book
